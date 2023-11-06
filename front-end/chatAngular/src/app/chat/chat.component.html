@@ -1,0 +1,10 @@
+<router-outlet></router-outlet>
+
+<div *ngFor="let msg of listaMsg">
+    <li>
+        {{msg}}
+    </li>  
+</div>
+
+<input [(ngModel)]="novaMsg" (keyup)="$event.keyCode == 13 && sendMsg()" />
+<button (click)="sendMsg()">Enviar Mensagem</button>
